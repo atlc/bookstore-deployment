@@ -4,6 +4,8 @@ import categoriesRouter from "./categories";
 
 const router = express.Router();
 
+router.get("/health", (req, res) => res.json("Nice!"));
+
 router.use("/books", booksRouter);
 router.use("/categories", categoriesRouter);
 
